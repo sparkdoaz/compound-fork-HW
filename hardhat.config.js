@@ -24,7 +24,7 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
         blockNumber: 14646872
       },
       allowUnlimitedContractSize: true
@@ -40,6 +40,6 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: EtherScan_PRIVATE_KEY
+    apiKey: process.env.EtherScan_PRIVATE_KEY
   }
 };
